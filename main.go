@@ -20,6 +20,8 @@ type SuccessResponse struct {
 	Issuedat    string `json:"issued_at"`
 	Signature   string `json:"signature"`
 }
+
+// Application is to
 type Application struct {
 	FirstName                      string `json:"FirstName__c,omitempty"`
 	LastName                       string `json:"LastName__c,omitempty"`
@@ -40,6 +42,7 @@ type Application struct {
 	Supervisor1                    string `json:"Supervisor1__c,omitempty"`
 }
 
+// Response is to
 type Response struct {
 	ID      string `json:"id"`
 	Success bool   `json:"success"`
