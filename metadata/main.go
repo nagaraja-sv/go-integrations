@@ -13,6 +13,7 @@ import (
 type DynEnt map[string]interface{}
 
 func (d *DynEnt) Load(props []datastore.Property) error {
+	log.Println("Called  GetAccountHandler => 2")
 	// Note: you might want to clear current values from the map or create a new map
 	for _, p := range props {
 		(*d)[p.Name] = p.Value
@@ -21,6 +22,7 @@ func (d *DynEnt) Load(props []datastore.Property) error {
 }
 
 func (d *DynEnt) Save() (props []datastore.Property, err error) {
+	log.Println("Called  GetAccountHandler => 3")
 	for k, v := range *d {
 		props = append(props, datastore.Property{Name: k, Value: v})
 	}
@@ -48,13 +50,14 @@ func (d *DynEnt) Save(ch chan<- datastore.Property) {
 //GetAccountHandler is to
 func GetAccountHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
+	log.Println("Called  GetAccountHandler => 1")
 	c := appengine.NewContext(r)
 
 	//d := DynEnt{"email": "me@myhost.com", "time": time.Now()}
 
 	d := &DynEnt{}
 	if err := json.NewDecoder(r.Body).Decode(d); err != nil {
-		log.Printf("err ", err)
+		log.Println("err ", err)
 
 		return
 	}
@@ -64,7 +67,7 @@ func GetAccountHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 	k := datastore.NewIncompleteKey(c, "DynEntity", nil)
 	key, err := datastore.Put(c, k, d)
 	//	log.Fatalf("%v %v", key, err)
-	log.Printf("Key ", key)
-	log.Printf("err ", err)
+	log.Println("Key ", key)
+	log.Println("err ", err)
 
 }
