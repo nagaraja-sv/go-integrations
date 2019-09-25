@@ -58,11 +58,30 @@ func main() {
 
 	// we iterate through every user within our Dispensing array
 	for i := 0; i < len(kinDispensing.Product); i++ {
+
 		fmt.Println("Product Name " + kinDispensing.Product[0].Name)
 		fmt.Println("Product StdQty " + kinDispensing.Product[0].StdQty)
 		fmt.Println("Processname " + kinDispensing.Product[0].RawMaterials[0].Process[0].ProcessName)
 		fmt.Println("Material " + kinDispensing.Product[0].RawMaterials[0].Process[0].Materials[0].MaterailName)
 		fmt.Println("Material StdQuty " + kinDispensing.Product[0].RawMaterials[0].Process[0].Materials[0].StdQty)
+
+		//requriedqunity := batch * MaterialStdQuty / stdy
+
+		if kinDispensing.Product[i].Name == "CLOPIDOGREL PELLETS 50 %  w/w" {
+
+			stdy := kinDispensing.Product[i].StdQty
+			Processname := kinDispensing.Product[i].RawMaterials[i].Process[i].ProcessName
+
+			fmt.Println("Processname " + Processname)
+			fmt.Println("Product StdQty " + stdy)
+
+			if kinDispensing.Product[i].RawMaterials[i].Process[i].Materials[i].MaterailName == "Clopidogrel Bisulphate" {
+
+				MaterialStdQuty := kinDispensing.Product[i].RawMaterials[i].Process[i].Materials[i].StdQty
+				fmt.Println("MaterialStdQuty " + MaterialStdQuty)
+			}
+
+		}
 	}
 
 }
