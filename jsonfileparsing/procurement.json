@@ -1,0 +1,109 @@
+{
+   "Product":[ 
+      {
+      "Name": "CLOPIDOGREL PELLETS 50 %  w/w",
+      "ID": "PCS",
+      "ProductRecordId": "Unique Identifier of the Product",
+      "Description": "",
+      "StdQty": "459.00",
+      "RawMaterials": [
+         {
+            "Process": [
+               {
+                  "ProcessName": "Drug Loading",
+                  "ProcessNameSeq#": "1",
+                  "Materials": [
+                     {
+                        "MaterailName": "Clopidogrel Bisulphate",
+                        "MaterailID": "Get ID From the Entered Material from data base",
+                        "Spec": "IP",
+                        "StdQty ": "300.000"
+                     },
+                     {
+                        "MaterailName": "Sugar spheres 24#30",
+                        "MaterailID": "Get ID From the Entered Material from data base",
+                        "Spec": "IH",
+                        "StdQty ": "77.000"
+                     },
+                     {
+                        "MaterailName": "Sodium Starch Glycolate",
+                        "MaterailID": "Get ID From the Entered Material from data base",
+                        "Spec": "IP",
+                        "StdQty ": "18.000"
+                     }
+                  ]
+               },
+               {
+                  "ProcessName": "BINDER SOLUTION PREPARATION",
+                  "ProcessNameSeq#": "2",
+                  "Materials": [
+                     {
+                        "MaterailName": "*Isopropyl alcohol",
+                        "MaterailID": "Get ID From the Entered Material from data base",
+                        "Spec": "IP",
+                        "StdQty ": "120.000"
+                     },
+                     {
+                        "MaterailName": "Poly vinyl pyrrolidone K30",
+                        "MaterailID": "Get ID From the Entered Material from data base",
+                        "Spec": "IH",
+                        "StdQty ": "12.000"
+                     },
+                     {
+                        "MaterailName": "Methyl Paraben",
+                        "MaterailID": "Get ID From the Entered Material from data base",
+                        "Spec": "IP",
+                        "StdQty ": "0.450"
+                     }
+                  ]
+               },
+               {
+                  "ProcessName": "IR COATING",
+                  "ProcessNameSeq#": "3",
+                  "Materials": [
+                     {
+                        "MaterailName": "HPMC E15",
+                        "MaterailID": "Get ID From the Entered Material from data base",
+                        "Spec": "IP",
+                        "StdQty ": "5.500"
+                     },
+                     {
+                        "MaterailName": "*Iso Propyl alcohol",
+                        "MaterailID": "Get ID From the Entered Material from data base",
+                        "Spec": "IH",
+                        "StdQty ": "53.000"
+                     },
+                     {
+                        "MaterailName": "*Methylene Dichloride",
+                        "MaterailID": "Get ID From the Entered Material from data base",
+                        "Spec": "IP",
+                        "StdQty ": "79.000"
+                     }
+                  ]
+               }
+            ]
+         }
+
+      ],
+      "PackingMaterials": [
+         {
+            "MaterailName": "HDPE Containers",
+            "StdQty ": "10"
+         },
+         {
+            "MaterailName": "Poly Bags(Block)",
+            "StdQty ": "10"
+         },
+         {
+            "MaterailName": "Poly Bags(Transparent)",
+            "StdQty ": "10"
+         },
+         {
+            "MaterailName": "Silicagel bags",
+            "StdQty ": "10"
+         }
+      ]
+   }
+]
+}      
+
